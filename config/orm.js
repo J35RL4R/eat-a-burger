@@ -46,14 +46,13 @@ const orm = {
 
     console.log(query);
 
-    connection.query(query, values, (err, result) => {
-        if (err)
-          throw err;
-        cb(result);
-      });
+    connection.query(query, values, function(err, result) {
+      if (err) throw err;
+      cb(result);
+    });
   },
-
-  updateOne: (table, updates, condition, cb) => {
+  
+  updateOne: function(table, updates, condition, cb) {
     let query = "UPDATE " + table;
 
     query += " SET ";
@@ -63,25 +62,23 @@ const orm = {
 
     console.log(query);
 
-    connection.query(query, (err, result) => {
-      if (err)
-        throw err;
+    connection.query(query, function(err, result) {
+      if (err) throw err;
       cb(result);
     });
   }, 
-  deleteOne: (table, condition, cb) => {
+  deleteOne: function(table, condition, cb) {
     let query = "DELETE FROM " + table;
 
     query += " WHERE ";
     query += condition;
 
     console.log(query);
-
-    connection.query(query, (err, result) => {
-        if (err)
-          throw err;
-        cb(result);
-      });
+    
+    connection.query(query, function(err, result) {
+      if (err) throw err;
+      cb(result);
+    });
   }
 };
 
