@@ -1,26 +1,25 @@
-
 {
-    "name": "eat-a-burger-app",
-    "version": "1.0.0",
-    "description": "a web application that uses MySQL, Node, Express, and Handlebars to add/delete burgers to a table.",
-    "main": "server.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/J35RL4R/eat-a-burger"
-    },
-    "author": "Jesse R. Larsen",
-    "license": "MIT",
-    "bugs": {
-      "url":"https://github.com/J35RL4R/"
-    },
-    "homepage": "https://github.com/J35RL4R/",
-    "dependencies": {
-      "dotenv": "^8.2.0",
-      "express": "^4.17.1",
-      "express-handlebars": "^5.2.0",
-      "mysql": "^2.18.1"
-    }
+  "name": "eat-a-burger-app",
+  "version": "1.0.0",
+  "description": "a web application that uses MySQL, Node, Express, and Handlebars to add/delete burgers to a table.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J35RL4R/eat-a-burger"
+  },
+  "author": "Jesse R. Larsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/J35RL4R/"
+  },
+  "homepage": "https://github.com/J35RL4R/",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "mysql": "^2.18.1"
   }
+}
