@@ -1,29 +1,30 @@
-$(()=> {
-    $(".devour").on("click", (event) => {
-        const id = $(this).data("id");
-        const update = { devoured: true };
+$(() => {
+        // Devour button code for each burger on the menu
+        $(".devour").on("click", function (event) {
+            const id = $(this).data("id");
+            const update = { devoured: true };
 
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: update
-        }).then( function() {
-            location.reload();
+            $.ajax("/api/burgers/" + id, {
+                type: "PUT",
+                data: update
+            }).then(() => {
+                location.reload();
+            });
         });
-    })
 
-    
-    $(".delete").on("click", (event) => {
-        const id = $(this).data("id");
+        // Delete button code for each burger on the menu
+        $(".delete").on("click", function (event) {
+            const id = $(this).data("id");
 
-        $.ajax("/api/burgers/" + id, {
-            type: "DELETE"
-        }).then( function() {
-            location.reload();
+            $.ajax("/api/burgers/" + id, {
+                type: "DELETE"
+            }).then(() => {
+                location.reload();
+            });
         });
-    })
 
-   
-    $(".create").on("submit", (event) => {
+        // Submit button code for new burger form
+        $(".create").on("submit", (event) => {
             event.preventDefault();
 
             const newBurger = {
@@ -36,8 +37,8 @@ $(()=> {
                 type: "POST",
                 data: newBurger
             }).then(() => {
-                    console.log("created new burger");
-                    location.reload();
-                });
-        })
-});
+                console.log("created new burger");
+                location.reload();
+            });
+        });
+    });
