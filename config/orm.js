@@ -86,5 +86,4 @@ const orm = {
   }
 };
 
-// Export the orm for the burger.js model
 module.exports = orm;
