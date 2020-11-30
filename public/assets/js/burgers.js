@@ -1,6 +1,5 @@
 $(()=> {
-    // Devour button code for each burger on the menu
-    $(".devour").on("click", function(event) {
+    $(".devour").on("click", (event) => {
         const id = $(this).data("id");
         const update = { devoured: true };
 
@@ -12,7 +11,7 @@ $(()=> {
         });
     })
 
-    // Delete button code for each burger on the menu
+    
     $(".delete").on("click", (event) => {
         const id = $(this).data("id");
 
@@ -23,7 +22,7 @@ $(()=> {
         });
     })
 
-    // Submit button code for new burger form
+   
     $(".create").on("submit", (event) => {
             event.preventDefault();
 

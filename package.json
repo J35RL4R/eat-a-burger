@@ -7,16 +7,6 @@
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/J35RL4R/eat-a-burger"
-  },
-  "author": "Jesse R. Larsen",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/J35RL4R/"
-  },
-  "homepage": "https://github.com/J35RL4R/",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
