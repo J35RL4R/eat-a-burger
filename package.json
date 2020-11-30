@@ -4,6 +4,7 @@
   "description": "a web application that uses MySQL, Node, Express, and Handlebars to add/delete burgers to a table.",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

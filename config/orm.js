@@ -27,14 +27,15 @@ function printQuestionMarks(num) {
 }
 
 const orm = {
-  selectAll: function(table, cb) {
+  selectAll: (table, cb) => {
     const query = "SELECT * FROM " + table + ";";
-    connection.query(query, function(err, result) {
-      if (err) throw err;
+    connection.query(query, function (err, result) {
+      if (err)
+        throw err;
       cb(result);
     });
   },
-  insertOne: function(table, columns, values, cb) {
+  insertOne: (table, columns, values, cb) => {
     let query = "INSERT INTO " + table;
 
     query += " (";
@@ -46,13 +47,14 @@ const orm = {
 
     console.log(query);
 
-    connection.query(query, values, function(err, result) {
-      if (err) throw err;
+    connection.query(query, values, (err, result) => {
+      if (err)
+        throw err;
       cb(result);
     });
   },
   
-  updateOne: function(table, updates, condition, cb) {
+  updateOne: (table, updates, condition, cb) => {
     let query = "UPDATE " + table;
 
     query += " SET ";
@@ -62,23 +64,25 @@ const orm = {
 
     console.log(query);
 
-    connection.query(query, function(err, result) {
-      if (err) throw err;
-      cb(result);
-    });
+    connection.query(query, (err, result) => {
+        if (err)
+          throw err;
+        cb(result);
+      });
   }, 
-  deleteOne: function(table, condition, cb) {
+  deleteOne: (table, condition, cb) => {
     let query = "DELETE FROM " + table;
 
     query += " WHERE ";
     query += condition;
 
     console.log(query);
-    
-    connection.query(query, function(err, result) {
-      if (err) throw err;
-      cb(result);
-    });
+
+    connection.query(query, (err, result) => {
+        if (err)
+          throw err;
+        cb(result);
+      });
   }
 };
 
